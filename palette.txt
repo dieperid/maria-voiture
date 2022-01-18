@@ -1,5 +1,5 @@
 Design
-	https://www.pixilart.com/
+	https://libresprite.github.io/#!/
 
 	Code couleurs
 		#99ccff (hiver)
@@ -8,8 +8,4 @@ Design
 		#339933 (printemps)
 	
 	Police écriture 
-		Default
-		
-		
-		
-		
+		(à corriger)
