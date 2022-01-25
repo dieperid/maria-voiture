@@ -1,0 +1,11 @@
+Design
+	https://libresprite.github.io/#!/
+
+	Code couleurs pour le texte/boutton
+		#99ccff (hiver)
+		#cc5200 (automne)
+		#ff3333 (été)
+		#339933 (printemps)
+	
+	Police écriture 
+		(nirmala)
