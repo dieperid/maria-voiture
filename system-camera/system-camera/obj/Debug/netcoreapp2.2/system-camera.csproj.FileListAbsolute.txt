@@ -1,0 +1,11 @@
+F:\AllProjet\C#\mariaVoiture\system-camera\system-camera\bin\Debug\netcoreapp2.2\system-camera.deps.json
+F:\AllProjet\C#\mariaVoiture\system-camera\system-camera\bin\Debug\netcoreapp2.2\system-camera.runtimeconfig.json
+F:\AllProjet\C#\mariaVoiture\system-camera\system-camera\bin\Debug\netcoreapp2.2\system-camera.runtimeconfig.dev.json
+F:\AllProjet\C#\mariaVoiture\system-camera\system-camera\bin\Debug\netcoreapp2.2\system-camera.dll
+F:\AllProjet\C#\mariaVoiture\system-camera\system-camera\obj\Debug\netcoreapp2.2\system-camera.csprojAssemblyReference.cache
+F:\AllProjet\C#\mariaVoiture\system-camera\system-camera\obj\Debug\netcoreapp2.2\system-camera.csproj.CoreCompileInputs.cache
+F:\AllProjet\C#\mariaVoiture\system-camera\system-camera\obj\Debug\netcoreapp2.2\system-camera.AssemblyInfoInputs.cache
+F:\AllProjet\C#\mariaVoiture\system-camera\system-camera\obj\Debug\netcoreapp2.2\system-camera.AssemblyInfo.cs
+F:\AllProjet\C#\mariaVoiture\system-camera\system-camera\bin\Debug\netcoreapp2.2\system-camera.pdb
+F:\AllProjet\C#\mariaVoiture\system-camera\system-camera\obj\Debug\netcoreapp2.2\system-camera.dll
+F:\AllProjet\C#\mariaVoiture\system-camera\system-camera\obj\Debug\netcoreapp2.2\system-camera.pdb
