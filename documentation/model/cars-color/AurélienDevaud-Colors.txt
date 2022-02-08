@@ -1,11 +1,13 @@
 cars-color:
 
-Couleur:
-	- camo 1
-		- main color
+Covers:
+	- camo
+		-effet de camouflage
+		- color
 			- Normal: 	#005700
 			- Darker shade: #003900
 			- Lighter shade:#00b100
 		- camo effect
 			- shading
-				-#
+	- heating
+		-effet de dégradé
