@@ -18,6 +18,10 @@ namespace main_menu
         public event EventHandler ClickedEvent; //Clicked event
         public event EventHandler PressedEvent; //Pressed event
         public event EventHandler ReleasedEvent; //Released event
+        #region[Modif Over Alex]
+        public event EventHandler Over; //Over event
+        public event EventHandler NotOver; //Over event
+        #endregion
 
 
         public Button(Font f, InputHandler ih) : base(ih)
@@ -34,6 +38,10 @@ namespace main_menu
             //Change button state if clicked
             if (mouseX >= _position.X && mouseX <= _position.X + _size.X && mouseY >= _position.Y && mouseY <= _position.Y + _size.Y)
             {
+                #region[Modif Over Alex]
+                Over?.Invoke(this, EventArgs.Empty);
+                #endregion
+
                 if (_inputHandler.IsPressed(Mouse.Button.Left))
                 {
                     _state = true;
@@ -43,9 +51,15 @@ namespace main_menu
                     _state = false;
                 }
             }
+            #region[Modif Over Alex]
+            else
+            {
+                NotOver?.Invoke(this, EventArgs.Empty);
+            }
+            #endregion
 
             //Trigger event when button is clicked
-            if(!_oldState && _state)
+            if (!_oldState && _state)
             {
                 ClickedEvent?.Invoke(this, EventArgs.Empty);
             }

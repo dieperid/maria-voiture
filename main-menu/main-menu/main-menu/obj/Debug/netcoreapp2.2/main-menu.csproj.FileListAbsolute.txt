@@ -11,3 +11,16 @@ F:\Github\maria-voiture\documentation\code\main-menu\main-menu\obj\Debug\netcore
 F:\Github\maria-voiture\documentation\code\main-menu\main-menu\obj\Debug\netcoreapp2.2\main-menu.pdb
 F:\Github\maria-voiture\documentation\code\main-menu\main-menu\obj\Debug\netcoreapp2.2\main_menu.Resource1.resources
 F:\Github\maria-voiture\documentation\code\main-menu\main-menu\obj\Debug\netcoreapp2.2\main-menu.csproj.GenerateResource.cache
+C:\Users\pd51hwz\Desktop\main-menu\main-menu\bin\Debug\netcoreapp2.2\main-menu.deps.json
+C:\Users\pd51hwz\Desktop\main-menu\main-menu\bin\Debug\netcoreapp2.2\main-menu.runtimeconfig.json
+C:\Users\pd51hwz\Desktop\main-menu\main-menu\bin\Debug\netcoreapp2.2\main-menu.runtimeconfig.dev.json
+C:\Users\pd51hwz\Desktop\main-menu\main-menu\bin\Debug\netcoreapp2.2\main-menu.dll
+C:\Users\pd51hwz\Desktop\main-menu\main-menu\bin\Debug\netcoreapp2.2\main-menu.pdb
+C:\Users\pd51hwz\Desktop\main-menu\main-menu\obj\Debug\netcoreapp2.2\main-menu.csprojAssemblyReference.cache
+C:\Users\pd51hwz\Desktop\main-menu\main-menu\obj\Debug\netcoreapp2.2\main_menu.Resource1.resources
+C:\Users\pd51hwz\Desktop\main-menu\main-menu\obj\Debug\netcoreapp2.2\main-menu.csproj.GenerateResource.cache
+C:\Users\pd51hwz\Desktop\main-menu\main-menu\obj\Debug\netcoreapp2.2\main-menu.csproj.CoreCompileInputs.cache
+C:\Users\pd51hwz\Desktop\main-menu\main-menu\obj\Debug\netcoreapp2.2\main-menu.AssemblyInfoInputs.cache
+C:\Users\pd51hwz\Desktop\main-menu\main-menu\obj\Debug\netcoreapp2.2\main-menu.AssemblyInfo.cs
+C:\Users\pd51hwz\Desktop\main-menu\main-menu\obj\Debug\netcoreapp2.2\main-menu.dll
+C:\Users\pd51hwz\Desktop\main-menu\main-menu\obj\Debug\netcoreapp2.2\main-menu.pdb

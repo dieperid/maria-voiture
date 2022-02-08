@@ -73,6 +73,16 @@ namespace main_menu {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Byte[].
         /// </summary>
+        internal static byte[] backgroundVideo {
+            get {
+                object obj = ResourceManager.GetObject("backgroundVideo", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Byte[].
+        /// </summary>
         internal static byte[] btnMultiplayer {
             get {
                 object obj = ResourceManager.GetObject("btnMultiplayer", resourceCulture);

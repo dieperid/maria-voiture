@@ -71,6 +71,19 @@ namespace main_menu
         {
             //_stateHandler.SetNextState(typeof(MenuMulti).Name);
         }
+
+        public void btnOver(object sender,EventArgs args)
+        {
+            Button btn = sender as Button;
+            btn.Color = Color.Black;
+        }
+
+        public void btnNotOver(object sender, EventArgs args)
+        {
+            Button btn = sender as Button;
+            btn.Color = Color.White;
+        }
+
         /// <summary>
         /// Méthode qui vas etre effectuer lorsqu'on appuie sur le bouton Solo
         /// </summary>
@@ -108,6 +121,7 @@ namespace main_menu
         {
             // Création du rectangle contenant le background
             _background = new RectangleShape(new Vector2f(_window.Size.X, _window.Size.Y));
+
             _background.Texture = new Texture(Resource1.background);
 
             // Création du rectangle contenant le titre
@@ -121,6 +135,9 @@ namespace main_menu
             btnMultiplayer.Position = new Vector2f(158, 450);
             btnMultiplayer.Size = new Vector2f(575, 99);
             btnMultiplayer.ClickedEvent += btnMultiplayerClick;
+            btnMultiplayer.Over += btnOver;
+            btnMultiplayer.NotOver += btnNotOver;
+
 
             //Création du bouton solo
             btnSolo = _widgetHandler.CreateButton();
@@ -128,6 +145,8 @@ namespace main_menu
             btnSolo.Position = new Vector2f(1118, 450);
             btnSolo.Size = new Vector2f(576, 100);
             btnSolo.ClickedEvent += btnSoloClick;
+            btnSolo.Over += btnOver;
+            btnSolo.NotOver += btnNotOver;
 
             // Création du bouton options
             btnOption = _widgetHandler.CreateButton();
@@ -135,6 +154,8 @@ namespace main_menu
             btnOption.Position = new Vector2f(158, 650);
             btnOption.Size = new Vector2f(575, 101);
             btnOption.ClickedEvent += btnOptionClick;
+            btnOption.Over += btnOver;
+            btnOption.NotOver += btnNotOver;
 
             // Création du bouton quit
             btnQuit = _widgetHandler.CreateButton();
@@ -142,6 +163,8 @@ namespace main_menu
             btnQuit.Position = new Vector2f(1118, 650);
             btnQuit.Size = new Vector2f(576, 100);
             btnQuit.ClickedEvent += btnQuitClick;
+            btnQuit.Over += btnOver;
+            btnQuit.NotOver += btnNotOver;
         }
 
         /// <summary>

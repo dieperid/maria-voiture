@@ -1125,11 +1125,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\Github\\maria-voiture\\documentation\\code\\main-menu\\main-menu\\main-menu.csproj",
+      "projectUniqueName": "F:\\Github\\maria-voiture\\main-menu\\main-menu\\main-menu\\main-menu.csproj",
       "projectName": "main-menu",
-      "projectPath": "F:\\Github\\maria-voiture\\documentation\\code\\main-menu\\main-menu\\main-menu.csproj",
+      "projectPath": "F:\\Github\\maria-voiture\\main-menu\\main-menu\\main-menu\\main-menu.csproj",
       "packagesPath": "C:\\Users\\pd51hwz\\.nuget\\packages\\",
-      "outputPath": "F:\\Github\\maria-voiture\\documentation\\code\\main-menu\\main-menu\\obj\\",
+      "outputPath": "F:\\Github\\maria-voiture\\main-menu\\main-menu\\main-menu\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
