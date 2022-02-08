@@ -1,0 +1,11 @@
+H:\ICT\ICT_326\maria-voiture\SoundVolume\SoundVolume\bin\Debug\netcoreapp2.2\SoundVolume.deps.json
+H:\ICT\ICT_326\maria-voiture\SoundVolume\SoundVolume\bin\Debug\netcoreapp2.2\SoundVolume.runtimeconfig.json
+H:\ICT\ICT_326\maria-voiture\SoundVolume\SoundVolume\bin\Debug\netcoreapp2.2\SoundVolume.runtimeconfig.dev.json
+H:\ICT\ICT_326\maria-voiture\SoundVolume\SoundVolume\bin\Debug\netcoreapp2.2\SoundVolume.dll
+H:\ICT\ICT_326\maria-voiture\SoundVolume\SoundVolume\obj\Debug\netcoreapp2.2\SoundVolume.csprojAssemblyReference.cache
+H:\ICT\ICT_326\maria-voiture\SoundVolume\SoundVolume\obj\Debug\netcoreapp2.2\SoundVolume.csproj.CoreCompileInputs.cache
+H:\ICT\ICT_326\maria-voiture\SoundVolume\SoundVolume\obj\Debug\netcoreapp2.2\SoundVolume.AssemblyInfoInputs.cache
+H:\ICT\ICT_326\maria-voiture\SoundVolume\SoundVolume\obj\Debug\netcoreapp2.2\SoundVolume.AssemblyInfo.cs
+H:\ICT\ICT_326\maria-voiture\SoundVolume\SoundVolume\bin\Debug\netcoreapp2.2\SoundVolume.pdb
+H:\ICT\ICT_326\maria-voiture\SoundVolume\SoundVolume\obj\Debug\netcoreapp2.2\SoundVolume.dll
+H:\ICT\ICT_326\maria-voiture\SoundVolume\SoundVolume\obj\Debug\netcoreapp2.2\SoundVolume.pdb
