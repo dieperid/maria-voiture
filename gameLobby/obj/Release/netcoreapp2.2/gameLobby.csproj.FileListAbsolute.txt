@@ -1,0 +1,11 @@
+C:\Users\damloup\Desktop\maria-voiture\gameLobby\bin\Release\netcoreapp2.2\gameLobby.deps.json
+C:\Users\damloup\Desktop\maria-voiture\gameLobby\bin\Release\netcoreapp2.2\gameLobby.runtimeconfig.json
+C:\Users\damloup\Desktop\maria-voiture\gameLobby\bin\Release\netcoreapp2.2\gameLobby.runtimeconfig.dev.json
+C:\Users\damloup\Desktop\maria-voiture\gameLobby\bin\Release\netcoreapp2.2\gameLobby.dll
+C:\Users\damloup\Desktop\maria-voiture\gameLobby\bin\Release\netcoreapp2.2\gameLobby.pdb
+C:\Users\damloup\Desktop\maria-voiture\gameLobby\obj\Release\netcoreapp2.2\gameLobby.csprojAssemblyReference.cache
+C:\Users\damloup\Desktop\maria-voiture\gameLobby\obj\Release\netcoreapp2.2\gameLobby.csproj.CoreCompileInputs.cache
+C:\Users\damloup\Desktop\maria-voiture\gameLobby\obj\Release\netcoreapp2.2\gameLobby.AssemblyInfoInputs.cache
+C:\Users\damloup\Desktop\maria-voiture\gameLobby\obj\Release\netcoreapp2.2\gameLobby.AssemblyInfo.cs
+C:\Users\damloup\Desktop\maria-voiture\gameLobby\obj\Release\netcoreapp2.2\gameLobby.dll
+C:\Users\damloup\Desktop\maria-voiture\gameLobby\obj\Release\netcoreapp2.2\gameLobby.pdb
