@@ -10,8 +10,9 @@ namespace main_menu
 {
     internal class WidgetHandler
     {
-        List<Widget> _widgets = new List<Widget>(); //List of widget
+        //List<Widget> _widgets = new List<Widget>(); //List of widget
         InputHandler _inputHandler; // Handles input
+        GameState _actualState;
         Font _font;
 
         /// <summary>
@@ -29,7 +30,7 @@ namespace main_menu
         public Button CreateButton()
         {
             Button btn = new Button(_font, _inputHandler);
-            _widgets.Add(btn);
+            _actualState.Widgets.Add(btn);
             return btn;
         }
 
@@ -40,7 +41,7 @@ namespace main_menu
         public Slider CreateSlider(string txt)
         {
             Slider slider = new Slider(txt, _font, _inputHandler);
-            _widgets.Add(slider);
+            _actualState.Widgets.Add(slider);
             return slider;
         }
 
@@ -51,7 +52,7 @@ namespace main_menu
         public Label CreateLabel()
         {
             Label lbl = new Label(_font, _inputHandler);
-            _widgets.Add(lbl);
+            _actualState.Widgets.Add(lbl);
             return lbl;
         }
 
@@ -61,7 +62,7 @@ namespace main_menu
         /// <param name="dt"> Delta time </param>
         public void Update(float dt)
         {
-            foreach (Widget widget in _widgets)
+            foreach (Widget widget in _actualState.Widgets)
             {
                 widget.Update(dt);
             }
@@ -73,10 +74,15 @@ namespace main_menu
         /// <param name="w"> Used window </param>
         public void Render(RenderWindow w)
         {
-            foreach (Widget widget in _widgets)
+            foreach (Widget widget in _actualState.Widgets)
             {
                 widget.Render(w);
             }
+        }
+
+        public void StateUpdate(GameState state)
+        {
+            _actualState = state;
         }
 
         /// <summary>
@@ -86,6 +92,15 @@ namespace main_menu
         {
             get { return _font; }
             set { _font = value; }
+        }
+
+        /// <summary>
+        /// et/Set State
+        /// </summary>
+        public GameState GameState
+        {
+            get { return _actualState; }
+            set { _actualState = value; }
         }
     }
 }

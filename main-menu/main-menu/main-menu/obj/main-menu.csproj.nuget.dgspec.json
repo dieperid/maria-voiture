@@ -47,6 +47,10 @@
               "version": "[2.2.0, )",
               "autoReferenced": true
             },
+            "Nager.VideoStream": {
+              "target": "Package",
+              "version": "[1.0.4, )"
+            },
             "SFML.Net": {
               "target": "Package",
               "version": "[2.5.0, )"

@@ -72,7 +72,7 @@ namespace main_menu
             //_stateHandler.SetNextState(typeof(MenuMulti).Name);
         }
 
-        public void btnOver(object sender,EventArgs args)
+        public void btnOver(object sender, EventArgs args)
         {
             Button btn = sender as Button;
             btn.Color = Color.Black;
@@ -172,10 +172,6 @@ namespace main_menu
         /// </summary>
         public override void Update()
         {
-            //if (_inputHandler.IsClicked(Keyboard.Key.A))
-            //{
-            //    _stateHandler.SetNextState(typeof(Main2Menu).Name);
-            //}
         }
 
         /// <summary>
@@ -187,7 +183,6 @@ namespace main_menu
             _w.Draw(_background);
             // Affichage des autres inputs
             _w.Draw(_title);
-            
         }
     }
 }

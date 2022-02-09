@@ -14,7 +14,7 @@ namespace main_menu
         bool _oldState = false; // Old button's state
         bool _state = false; // Actual button's state
         Text _text; //Button's text
-        Texture _texutre; // Button's texture
+        Texture _texture; // Button's texture
         public event EventHandler ClickedEvent; //Clicked event
         public event EventHandler PressedEvent; //Pressed event
         public event EventHandler ReleasedEvent; //Released event
@@ -81,10 +81,11 @@ namespace main_menu
         public override void Render(RenderWindow w)
         {
             RectangleShape shape = new RectangleShape(_size);
+            _texture.Smooth = true;
             shape.Position = _position;
             _text.Position = _position;
             shape.FillColor = _color;
-            shape.Texture = _texutre;
+            shape.Texture = _texture;
             w.Draw(shape);
             w.Draw(_text);
         }
@@ -100,8 +101,8 @@ namespace main_menu
 
         public Texture Texture
         {
-            get { return _texutre; }
-            set { _texutre = value; }
+            get { return _texture; }
+            set { _texture = value; }
         }
     }
 }

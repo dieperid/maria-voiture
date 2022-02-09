@@ -20,6 +20,7 @@ namespace main_menu
         protected RenderWindow _window;
         protected WidgetHandler _widgetHandler;
         protected Color _clearColor; //Background color
+        private List<Widget> _widgets = new List<Widget>(); //List of widget
         /// <summary>
         /// Constructor
         /// </summary>
@@ -67,6 +68,14 @@ namespace main_menu
         public Color ClearColor
         {
             get { return _clearColor;}
+        }
+
+        /// <summary>
+        /// Get the clear color
+        /// </summary>
+        public List<Widget> Widgets
+        {
+            get { return _widgets; }
         }
     }
 }

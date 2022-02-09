@@ -30,6 +30,7 @@ namespace main_menu
             {
                 _stateHandler.ChangeActualState(_stateHandler.AllStates[0].Name);
             }
+            _widgetHandler.GameState = _stateHandler.ActualState;
         }
 
         /// <summary>
@@ -72,6 +73,7 @@ namespace main_menu
             //Loads games states
             foreach(GameState gs in _stateHandler.AllStates)
             {
+                _widgetHandler.StateUpdate(gs);
                 gs.Load();
             }
 
@@ -95,6 +97,8 @@ namespace main_menu
 
                 //Update the actual game state
                 _stateHandler.ActualState.Update();
+
+                _widgetHandler.GameState = _stateHandler.ActualState;
 
                 //Clear last image
                 _window.Clear(_stateHandler.ActualState.ClearColor);

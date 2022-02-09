@@ -1,13 +1,14 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.2",
-    "signature": "86d59655cfd05a83ed879f09396efab0c02d577d"
+    "signature": "20d6710419f28ed149a2bac437dd36a6c6d1ad47"
   },
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v2.2": {
       "main-menu/1.0.0": {
         "dependencies": {
+          "Nager.VideoStream": "1.0.4",
           "SFML.Net": "2.5.0"
         },
         "runtime": {
@@ -308,6 +309,14 @@
           }
         }
       },
+      "Nager.VideoStream/1.0.4": {
+        "runtime": {
+          "lib/netstandard2.0/Nager.VideoStream.dll": {
+            "assemblyVersion": "1.0.4.0",
+            "fileVersion": "1.0.4.0"
+          }
+        }
+      },
       "SFML.Audio/2.5.0": {
         "dependencies": {
           "CSFML": "2.5.0",
@@ -380,6 +389,13 @@
       "sha512": "sha512-A3X+zyjAtvIQkpwCSS/F5fDOFRWeT+USIAK+DhGujNufF+qV1ty5cYGJihmmGeokX3yd89uZoNH8mcsmXCY/yw==",
       "path": "csfml/2.5.0",
       "hashPath": "csfml.2.5.0.nupkg.sha512"
+    },
+    "Nager.VideoStream/1.0.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-U2cOv6UKk7EdEjF9oO7tQI4HdjwPRWK7reCqKEDribl8KyCXyL7lhO65u0W6yYdsSoZI3KzpbLgkWtbQi27l7g==",
+      "path": "nager.videostream/1.0.4",
+      "hashPath": "nager.videostream.1.0.4.nupkg.sha512"
     },
     "SFML.Audio/2.5.0": {
       "type": "package",

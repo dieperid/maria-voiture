@@ -83,6 +83,7 @@ namespace main_menu
         public GameState ActualState
         {
             get { return _state; }
+            set { _state = value; }
         }
 
         /// <summary>
