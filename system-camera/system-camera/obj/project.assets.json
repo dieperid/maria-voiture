@@ -1125,11 +1125,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\AllProjet\\C#\\mariaVoiture\\system-camera\\system-camera\\system-camera.csproj",
+      "projectUniqueName": "F:\\maria-voiture\\system-camera\\system-camera\\system-camera.csproj",
       "projectName": "system-camera",
-      "projectPath": "F:\\AllProjet\\C#\\mariaVoiture\\system-camera\\system-camera\\system-camera.csproj",
+      "projectPath": "F:\\maria-voiture\\system-camera\\system-camera\\system-camera.csproj",
       "packagesPath": "C:\\Users\\pr23yde\\.nuget\\packages\\",
-      "outputPath": "F:\\AllProjet\\C#\\mariaVoiture\\system-camera\\system-camera\\obj\\",
+      "outputPath": "F:\\maria-voiture\\system-camera\\system-camera\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

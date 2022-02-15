@@ -15,100 +15,91 @@ namespace system_camera
             //créer une nouvelle fenêtre
             RenderWindow window = new RenderWindow(new VideoMode(900, 900), "First-Programm");
 
-           
-
-
-            window.SetVerticalSyncEnabled(true);
-
             List<Drawable> drawablesItems = new List<Drawable>();  //list d'item à afficher
 
-            ////////////////////////////////FORMES AND TEXTURES///////////////////////////////
 
-            //création d'une texture
-            Texture circleTexture = new Texture(@"F:\test\git.png");
-            circleTexture.Smooth = true;
-
-            //création d'un sprite
-            Texture triangleTexture = new Texture(@"F:\test\git.png");
-            triangleTexture.Smooth = true;
-
-            CircleShape circleShapeTwo = new CircleShape(50, 20);
-            circleShapeTwo.Position = new Vector2f(200, 400);
-            circleShapeTwo.OutlineThickness = 10f;
-            circleShapeTwo.OutlineColor = Color.Black;       
-            circleShapeTwo.Texture = circleTexture;
-            drawablesItems.Add(circleShapeTwo);
-
-            //création d'un retangle et ajout de celui-ci dans la liste
+            //création d'un retangle et ajout de celui-ci dans la liste (sert de repère par apport à la voiture)
             RectangleShape rectangleShape = new RectangleShape(new Vector2f(50, 100));
             rectangleShape.OutlineThickness = 10f;
             rectangleShape.OutlineColor = Color.Black;
             rectangleShape.FillColor = Color.Green;
             drawablesItems.Add(rectangleShape);
 
+            ////////////////////////////////////////PROGRAMME//////////////////////////////////////////////
 
+            //car 
             RectangleShape car = new RectangleShape(new Vector2f(70, 100));
             car.FillColor = Color.Red;
             drawablesItems.Add(car);
 
-
-            //create a triangle
-            CircleShape triangle = new CircleShape(70, 3);
-            triangle.Position = new Vector2f(20, 400);
-            triangle.Texture = triangleTexture;
-            drawablesItems.Add(triangle);
-
-            View camera = new View(new Vector2f(350, 300), new Vector2f(500, 400));
-
-            ////////////////////////////////////////PROGRAMME//////////////////////////////////////////////
+            //view 
+            View camera = new View(new Vector2f(350, 300), new Vector2f(1700, 1600));
 
             //set de l'event
             window.Closed += CloseWindow;
 
-            float x = car.Position.X,
-                  y = car.Position.Y;
+            bool wantToMoveCamera = false; //this detect if user want ot move camera or not
 
-            
+
+
+            float x = 0, //middle position x of the car
+                 y = 0;  //middle position y of the car
+
+            //initialise the camera position
+            CameraAutoFollowCar(window, camera, car);
+
             //boucle du jeu
             while (window.IsOpen)
             {
                 //permet l'interaction avec la fenêtre
                 window.DispatchEvents();
 
-                //texture.Update(window);
-
+                //clear
                 window.Clear(Color.Blue);
 
+                //move the car (red rectangle)
+                SimulationCarMove(car, car.Position.X, car.Position.Y);
 
-                if (Keyboard.IsKeyPressed(Keyboard.Key.Left))
+                //this simulate button click event
+                if (Keyboard.IsKeyPressed(Keyboard.Key.Delete) && wantToMoveCamera == false)
                 {
-                    x -= 5;
-                    car.Position = new Vector2f(x, y);
-                    
-                }
-                if (Keyboard.IsKeyPressed(Keyboard.Key.Right))
-                {
-                    x += 5;
-                    car.Position = new Vector2f(x, y);
-                
-                }
-                if (Keyboard.IsKeyPressed(Keyboard.Key.Up))
-                {
-                    y -= 5;
-                    car.Position = new Vector2f(x, y);
-                
-                }
-                if (Keyboard.IsKeyPressed(Keyboard.Key.Down))
-                {
-                    y += 5;
-                    car.Position = new Vector2f(x, y);               
+                    //initialse the position
+                    x = car.Position.X + car.Size.X / 2;
+                    y = car.Position.Y + car.Size.Y / 2;
+
+                    //set the bool
+                    wantToMoveCamera = true;
+
+                    Thread.Sleep(100);
                 }
 
-                CameraAutoFollowCar(window, camera, car);
+                CorrectingTheCameraPosition(window, camera, car, ref x, ref y);
 
+                //if user want to control the camera
+                if (wantToMoveCamera)
+                {
+                    //move camera
+                    UserMoveCamera(window, camera, car, ref x, ref y);
+                }
+                else
+                {
+                    //follow car
+                    CameraAutoFollowCar(window, camera, car);
+                }
 
+                //this simulate a second button click event (this time that mean he want to stop the control of the camera)
+                if (Keyboard.IsKeyPressed(Keyboard.Key.Delete) && wantToMoveCamera == true)
+                {
+                    //set the bool
+                    wantToMoveCamera = false;
 
-                //affichages des éléments
+                    //set the camera position on the car
+                    CameraAutoFollowCar(window, camera, car);
+
+                    Thread.Sleep(100);
+                }                
+
+                //display elements
                 foreach (Drawable shapes in drawablesItems)
                 {
                     window.Draw(shapes);
@@ -123,6 +114,10 @@ namespace system_camera
                 window.Close();
             }
         }
+
+
+        //////////////////////////////////////// View Methodes //////////////////////////////////////////////////// 
+
         /// <summary>
         /// this methode is using to follow the user car
         /// </summary>
@@ -135,55 +130,168 @@ namespace system_camera
             window.SetView(camera);
         }
 
-        public enum Direction
+        /// <summary>
+        /// this methode can move the position of the camera
+        /// </summary>
+        /// <param name="window">main game window</param>
+        /// <param name="camera">view object</param>
+        /// <param name="car">RectangleShape user car</param>
+        /// <param name="x">middle position x of the car</param>
+        /// <param name="y">middle position x of the car</param>
+        public static void UserMoveCamera(RenderWindow window, View camera, RectangleShape car, ref float x, ref float y)
         {
-            Left,
-            Right,
-            Up,
-            Down
-        }
-        public static void UserMoveCamera(RenderWindow window, View camera, RectangleShape car)
-        {
-            const float SPEED = 3;
+            const float CAMERASPEED = 0.5f; //speed of the camera move
+            float MARGIN = car.Size.Y;     //margin with the sides of the camera
 
-            float x = car.Position.X + car.Size.X / 2,
-                  y = car.Position.Y + car.Size.Y / 2;
-
-            bool returnToCar = false;
-
-            do
+            //détect wich key is pressed
+            if (Keyboard.IsKeyPressed(Keyboard.Key.Up))
             {
-
-                if (Keyboard.IsKeyPressed(Keyboard.Key.Up))
+                //check if user can move the camera to this direction
+                if (y > (car.Position.Y + car.Size.Y / 2) - (camera.Size.Y / 2) + car.Size.Y / 2 + MARGIN)
                 {
-                    camera.Center = (new Vector2f(x, y -= SPEED));
-                    window.SetView(camera);
+                    //initialise y position
+                    y -= CAMERASPEED;
                 }
-                if (Keyboard.IsKeyPressed(Keyboard.Key.Down))
+                else
                 {
-                    camera.Center = (new Vector2f(x, y += SPEED));
-                    window.SetView(camera);
+                    //rectifiy the y position
+                    y = (car.Position.Y + car.Size.Y / 2) - (camera.Size.Y / 2) + car.Size.Y / 2 + MARGIN;
                 }
-                if (Keyboard.IsKeyPressed(Keyboard.Key.Left))
-                {
-                    camera.Center = (new Vector2f(x -= SPEED, y));
-                    window.SetView(camera);
-                }
-                if (Keyboard.IsKeyPressed(Keyboard.Key.Right))
-                {
-                    
-                    camera.Center = (new Vector2f(x += SPEED, y));
-                    window.SetView(camera);
-                }
-                if (Keyboard.IsKeyPressed(Keyboard.Key.Escape))
-                {
-                    returnToCar = true;
-                }
-                                           
-                
             }
-            while (!returnToCar);
+            if (Keyboard.IsKeyPressed(Keyboard.Key.Down))
+            {
+                //check if user can move the camera to this direction
+                if (y < (car.Position.Y + car.Size.Y / 2) + (camera.Size.Y / 2) - car.Size.Y / 2 - MARGIN)
+                {
+                    //initialise y position
+                    y += CAMERASPEED;
+                }
+                else
+                {
+                    //rectifiy the y position
+                    y = (car.Position.Y + car.Size.Y / 2) + (camera.Size.Y / 2) - car.Size.Y / 2 - MARGIN;
+                }
+            }
+            if (Keyboard.IsKeyPressed(Keyboard.Key.Left))
+            {
+                //check if user can move the camera to this direction
+                if (x > (car.Position.X + car.Size.X / 2) - (camera.Size.X / 2) + car.Size.X / 2 + MARGIN)
+                {
+                    //initialise x position
+                    x -= CAMERASPEED;
+                }
+                else
+                {
+                    //rectifiy the x position
+                    x = (car.Position.X + car.Size.X / 2) - (camera.Size.X / 2) + car.Size.X / 2 + MARGIN;
+                }
+            }
+            if (Keyboard.IsKeyPressed(Keyboard.Key.Right))
+            {
+                //check if user can move the camera to this direction
+                if (x < (car.Position.X + car.Size.X / 2) + (camera.Size.X / 2) - car.Size.X / 2 - MARGIN)
+                {
+                    //initialise x position
+                    x += CAMERASPEED;
+                }
+                else
+                {
+                    //rectifiy the x position
+                    x = (car.Position.X + car.Size.X / 2) + (camera.Size.X / 2) - car.Size.X / 2 - MARGIN;
+                }
+            }
+
+            //set the focus position of the camera
+            camera.Center = new Vector2f(x, y);
+            window.SetView(camera);
         }
 
+        /// <summary>
+        /// this methode correct the position of the camera (car can t disappear to the view)
+        /// </summary>
+        /// <param name="window">main game window</param>
+        /// <param name="camera">view object</param>
+        /// <param name="car">RectangleShape user car</param>
+        /// <param name="x">middle position x of the car</param>
+        /// <param name="y">middle position x of the car</param>
+        public static void CorrectingTheCameraPosition(RenderWindow window, View camera, RectangleShape car, ref float x, ref float y)
+        {
+            float MARGIN = car.Size.Y;      //margin with the sides of the camera
+
+            //check if user can move the camera to this direction
+            if (!(x < (car.Position.X + car.Size.X / 2) + (camera.Size.X / 2) - car.Size.X / 2 - MARGIN))
+            {
+                //rectifiy the x position
+                x = (car.Position.X + car.Size.X / 2) + (camera.Size.X / 2) - car.Size.X / 2 - MARGIN;
+            }
+
+
+            //check if user can move the camera to this direction
+            if (!(x > (car.Position.X + car.Size.X / 2) - (camera.Size.X / 2) + car.Size.X / 2 + MARGIN))
+            {
+                //rectifiy the x position
+                x = (car.Position.X + car.Size.X / 2) - (camera.Size.X / 2) + car.Size.X / 2 + MARGIN;
+            }
+
+            //check if user can move the camera to this direction
+            if (!(y < (car.Position.Y + car.Size.Y / 2) + (camera.Size.Y / 2) - car.Size.Y / 2 - MARGIN))
+            {
+                //rectifiy the x position
+                y = (car.Position.Y + car.Size.Y / 2) + (camera.Size.Y / 2) - car.Size.Y / 2 - MARGIN;
+            }
+
+
+            //check if user can move the camera to this direction
+            if (!(y > (car.Position.Y + car.Size.Y / 2) - (camera.Size.Y / 2) + car.Size.Y / 2 + MARGIN))
+            {
+                //rectifiy the x position
+                y = (car.Position.Y + car.Size.Y / 2) - (camera.Size.Y / 2) + car.Size.Y / 2 + MARGIN;
+            }
+
+            //set the focus position of the camera
+            camera.Center = new Vector2f(x, y);
+            window.SetView(camera);
+        }
+
+        ////////////////////////////////// Other Methodes ///////////////////////////////////////////
+        
+        
+        /// <summary>
+        /// simule the movement of the cars
+        /// </summary>
+        /// <param name="car"></param>
+        /// <param name="carPositionX"></param>
+        /// <param name="carPositionY"></param>
+        public static void SimulationCarMove(RectangleShape car, float carPositionX, float carPositionY)
+        {
+            Random r = new Random();
+            int direction = r.Next(1, 5);
+
+            int CARSPEED = 1;
+
+            if (direction == 1)
+            {
+                carPositionX -= CARSPEED;
+                car.Position = new Vector2f(carPositionX, carPositionY);
+
+            }
+            if (direction == 2)
+            {
+                carPositionX += CARSPEED;           
+                car.Position = new Vector2f(carPositionX, carPositionY);
+
+            }
+            if (direction == 3)
+            {
+                carPositionY -= CARSPEED;
+                car.Position = new Vector2f(carPositionX, carPositionY);
+
+            }
+            if (direction == 4)
+            {
+                carPositionY += CARSPEED;
+                car.Position = new Vector2f(carPositionX, carPositionY);
+            }
+        }
     }
 }
