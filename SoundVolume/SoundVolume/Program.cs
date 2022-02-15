@@ -26,12 +26,10 @@ namespace SoundVolume
 
             //Add event to close the window
             window.Closed += close;
-
-            VertexArray line = new VertexArray(PrimitiveType.Lines, 2);
             
 
-            //SoundBuffer soundBuffer = new SoundBuffer();
-            Sound sound = new Sound();
+            SoundBuffer soundBuffer = new SoundBuffer("H:\\ICT\\ICT_326\\maria-voiture\\SoundVolume\\Sound.ogg");
+            Sound sound = new Sound(soundBuffer);
             sound.Play();
 
             //Instance the window
@@ -60,7 +58,6 @@ namespace SoundVolume
                 //Instance the properties
                 window.Draw(rectangleShape);
                 window.Draw(circleShape);
-                window.Draw(line);
 
 
                 sound.Volume = mooveCursor(circleShape, rectangleShape);
@@ -112,8 +109,6 @@ namespace SoundVolume
             {
                 float middleX = circle.Position.X + circle.Radius;
                 float middleY = circle.Position.Y + circle.Radius;
-                line[0] = new Vertex(new Vector2f(middleX, middleY));
-                line[1] = new Vertex(new Vector2f(Mouse.GetPosition(window).X, Mouse.GetPosition(window).Y));
 
                 if (Math.Sqrt(Math.Pow(middleY - Mouse.GetPosition(window).Y, 2) + Math.Pow(middleX - Mouse.GetPosition(window).X, 2)) <= circle.Radius)
                 {
