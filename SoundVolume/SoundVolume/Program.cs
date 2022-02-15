@@ -3,16 +3,16 @@ using SFML.Audio;
 using SFML.Graphics;
 using SFML.System;
 using SFML.Window;
-using SFML;
-using SFML.Graphics.Glsl;
 
 namespace SoundVolume
 {
     class Program
     {
+        private static bool IsPressed = false;
         static void Main()
         {
             //Properties
+            
             RenderWindow window = new RenderWindow(new VideoMode(1920, 1080), "Sound Volume");
             RectangleShape rectangleShape = new RectangleShape(new Vector2f(500, 5));
             CircleShape circleShape = new CircleShape(12);
@@ -27,6 +27,8 @@ namespace SoundVolume
             //Add event to close the window
             window.Closed += close;
 
+            VertexArray line = new VertexArray(PrimitiveType.Lines, 2);
+            
 
             //SoundBuffer soundBuffer = new SoundBuffer();
             Sound sound = new Sound();
@@ -58,8 +60,10 @@ namespace SoundVolume
                 //Instance the properties
                 window.Draw(rectangleShape);
                 window.Draw(circleShape);
+                window.Draw(line);
 
-                sound.Volume = mooveCursor();
+
+                sound.Volume = mooveCursor(circleShape, rectangleShape);
 
                 window.Display();
             }
@@ -70,21 +74,48 @@ namespace SoundVolume
                 Environment.Exit(0);
             }
 
-            float mooveCursor()
+            //Moove the cursor return:the sound volume
+            float mooveCursor(CircleShape circle, RectangleShape rectangle)
             {
-                if(Mouse.IsButtonPressed(Mouse.Button.Left) && checkMoseEnter(circleShape))
+                //Check if the mouse button is push or not
+                if(!Mouse.IsButtonPressed(Mouse.Button.Left))
                 {
-                    circleShape.Position = new Vector2f(Mouse.GetPosition().X, circleShape.Position.Y);
+                    IsPressed = false;
                 }
-                return (((circleShape.Position.X + circleShape.Radius) - rectangleShape.Position.X) * 100) / rectangleShape.Size.X;
+                else if(checkMoseEnter(circle) && Mouse.IsButtonPressed(Mouse.Button.Left) || IsPressed == true)
+                {
+                    IsPressed = true;
+                }
+
+                //Move the cursor
+                if(IsPressed == true)
+                {
+                    //Gére les exception si le curseur veut sortir
+                    if(circle.Position.X + circle.Radius > rectangle.Position.X && circle.Position.X + circle.Radius < rectangle.Position.X + rectangle.Size.X)
+                    {
+                        circle.Position = new Vector2f(Mouse.GetPosition(window).X - circle.Radius, circle.Position.Y);
+                    }
+                    else if(circle.Position.X + circle.Radius > rectangle.Position.X)
+                    {
+                        circle.Position = new Vector2f(rectangle.Position.X + rectangle.Size.X - circle.Radius - 1, circle.Position.Y);
+                    }
+                    else if (circle.Position.X + circle.Radius < rectangle.Position.X + rectangle.Size.X)
+                    {
+                        circle.Position = new Vector2f(rectangle.Position.X - circle.Radius + 1, circle.Position.Y);
+                    }
+                }
+                return (((circle.Position.X + circle.Radius) - rectangle.Position.X) * 100) / rectangle.Size.X;
             }
+
 
             bool checkMoseEnter(CircleShape circle)
             {
                 float middleX = circle.Position.X + circle.Radius;
-                float middleY = circle.Position.Y - circle.Radius;
+                float middleY = circle.Position.Y + circle.Radius;
+                line[0] = new Vertex(new Vector2f(middleX, middleY));
+                line[1] = new Vertex(new Vector2f(Mouse.GetPosition(window).X, Mouse.GetPosition(window).Y));
 
-                if (Math.Sqrt(Math.Pow(middleY - Mouse.GetPosition().Y, 2) + Math.Pow(middleX - Mouse.GetPosition().X, 2)) <= circle.Radius)
+                if (Math.Sqrt(Math.Pow(middleY - Mouse.GetPosition(window).Y, 2) + Math.Pow(middleX - Mouse.GetPosition(window).X, 2)) <= circle.Radius)
                 {
                     return true;
                 }
