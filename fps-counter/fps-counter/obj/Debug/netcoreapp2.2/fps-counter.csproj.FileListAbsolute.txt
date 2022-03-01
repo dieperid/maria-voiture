@@ -1,0 +1,11 @@
+C:\Users\pl70jwz\Desktop\fps-counter\fps-counter\bin\Debug\netcoreapp2.2\fps-counter.deps.json
+C:\Users\pl70jwz\Desktop\fps-counter\fps-counter\bin\Debug\netcoreapp2.2\fps-counter.runtimeconfig.json
+C:\Users\pl70jwz\Desktop\fps-counter\fps-counter\bin\Debug\netcoreapp2.2\fps-counter.runtimeconfig.dev.json
+C:\Users\pl70jwz\Desktop\fps-counter\fps-counter\bin\Debug\netcoreapp2.2\fps-counter.dll
+C:\Users\pl70jwz\Desktop\fps-counter\fps-counter\obj\Debug\netcoreapp2.2\fps-counter.csprojAssemblyReference.cache
+C:\Users\pl70jwz\Desktop\fps-counter\fps-counter\obj\Debug\netcoreapp2.2\fps-counter.csproj.CoreCompileInputs.cache
+C:\Users\pl70jwz\Desktop\fps-counter\fps-counter\obj\Debug\netcoreapp2.2\fps-counter.AssemblyInfoInputs.cache
+C:\Users\pl70jwz\Desktop\fps-counter\fps-counter\obj\Debug\netcoreapp2.2\fps-counter.AssemblyInfo.cs
+C:\Users\pl70jwz\Desktop\fps-counter\fps-counter\bin\Debug\netcoreapp2.2\fps-counter.pdb
+C:\Users\pl70jwz\Desktop\fps-counter\fps-counter\obj\Debug\netcoreapp2.2\fps-counter.dll
+C:\Users\pl70jwz\Desktop\fps-counter\fps-counter\obj\Debug\netcoreapp2.2\fps-counter.pdb

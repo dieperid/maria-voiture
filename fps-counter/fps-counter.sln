@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29102.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "fps-counter", "fps-counter\fps-counter.csproj", "{85636895-4081-4BF3-B8D7-39EED1F04CA3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{85636895-4081-4BF3-B8D7-39EED1F04CA3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{85636895-4081-4BF3-B8D7-39EED1F04CA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{85636895-4081-4BF3-B8D7-39EED1F04CA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{85636895-4081-4BF3-B8D7-39EED1F04CA3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0A43A665-03E4-4484-AFE5-59607349852B}
+	EndGlobalSection
+EndGlobal
