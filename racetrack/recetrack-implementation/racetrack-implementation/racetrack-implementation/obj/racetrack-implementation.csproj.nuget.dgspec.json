@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\pd50uyl\\Desktop\\git\\maria-voiture\\racetrack\\recetrack-implementation\\racetrack-implementation\\racetrack-implementation\\racetrack-implementation.csproj": {}
+    "C:\\Users\\thorey\\Desktop\\maria-voiture\\racetrack\\recetrack-implementation\\racetrack-implementation\\racetrack-implementation\\racetrack-implementation.csproj": {}
   },
   "projects": {
-    "C:\\Users\\pd50uyl\\Desktop\\git\\maria-voiture\\racetrack\\recetrack-implementation\\racetrack-implementation\\racetrack-implementation\\racetrack-implementation.csproj": {
+    "C:\\Users\\thorey\\Desktop\\maria-voiture\\racetrack\\recetrack-implementation\\racetrack-implementation\\racetrack-implementation\\racetrack-implementation.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\pd50uyl\\Desktop\\git\\maria-voiture\\racetrack\\recetrack-implementation\\racetrack-implementation\\racetrack-implementation\\racetrack-implementation.csproj",
+        "projectUniqueName": "C:\\Users\\thorey\\Desktop\\maria-voiture\\racetrack\\recetrack-implementation\\racetrack-implementation\\racetrack-implementation\\racetrack-implementation.csproj",
         "projectName": "racetrack-implementation",
-        "projectPath": "C:\\Users\\pd50uyl\\Desktop\\git\\maria-voiture\\racetrack\\recetrack-implementation\\racetrack-implementation\\racetrack-implementation\\racetrack-implementation.csproj",
-        "packagesPath": "C:\\Users\\pd50uyl\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\pd50uyl\\Desktop\\git\\maria-voiture\\racetrack\\recetrack-implementation\\racetrack-implementation\\racetrack-implementation\\obj\\",
+        "projectPath": "C:\\Users\\thorey\\Desktop\\maria-voiture\\racetrack\\recetrack-implementation\\racetrack-implementation\\racetrack-implementation\\racetrack-implementation.csproj",
+        "packagesPath": "C:\\Users\\thorey\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\thorey\\Desktop\\maria-voiture\\racetrack\\recetrack-implementation\\racetrack-implementation\\racetrack-implementation\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\pd50uyl\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\thorey\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
