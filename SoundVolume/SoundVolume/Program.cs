@@ -24,44 +24,55 @@ namespace SoundVolume
             circleShape.FillColor = Color.Red;
             circleShape.Position = new Vector2f(window.Size.X / 2 - circleShape.Radius, window.Size.Y / 2 - circleShape.Radius);
 
+            Font font = new Font("arial.ttf");
+            Text positionZ = new Text("0", font);
+            positionZ.Position = new Vector2f(rectangleShape.Position.X - positionZ.CharacterSize, rectangleShape.Position.Y);
+
+            Text positionE = new Text("100", font);
+            positionE.Position = new Vector2f(rectangleShape.Position.X + rectangleShape.Size.X, rectangleShape.Position.Y + rectangleShape.Size.Y);
+
             //Add event to close the window
             window.Closed += close;
             
 
-            SoundBuffer soundBuffer = new SoundBuffer("H:\\ICT\\ICT_326\\maria-voiture\\SoundVolume\\Sound.ogg");
+            SoundBuffer soundBuffer = new SoundBuffer("Sound.ogg");
             Sound sound = new Sound(soundBuffer);
             sound.Play();
 
-            //Instance the window
+            //Main loop
             while (window.IsOpen)
             {
                 //Use to button on the window
                 window.DispatchEvents();
 
-                //Clear the window
-                window.Clear();
+                
 
                 //Replace the window at the top of the screen
                 if (window.Position.X < 0 || window.Position.Y < 0)
                 {
                     window.Position = new Vector2i(Math.Abs(window.Position.X), Math.Abs(window.Position.Y));
                 }
+
                 if(window.Position.X != 0)
                 {
                     window.Position = new Vector2i(window.Position.X - 1, window.Position.Y);
                 }
+
                 if(window.Position.Y != 0)
                 {
                     window.Position = new Vector2i(window.Position.X, window.Position.Y - 1);
                 }
 
-                //Instance the properties
-                window.Draw(rectangleShape);
-                window.Draw(circleShape);
-
-
                 sound.Volume = mooveCursor(circleShape, rectangleShape);
 
+                //Clear the window
+                window.Clear();
+
+                //Render
+                window.Draw(rectangleShape);
+                window.Draw(circleShape);
+                window.Draw(positionZ);
+                window.Draw(positionE);
                 window.Display();
             }
 
@@ -95,10 +106,12 @@ namespace SoundVolume
                     else if(circle.Position.X + circle.Radius > rectangle.Position.X)
                     {
                         circle.Position = new Vector2f(rectangle.Position.X + rectangle.Size.X - circle.Radius - 1, circle.Position.Y);
+                        IsPressed = false;
                     }
                     else if (circle.Position.X + circle.Radius < rectangle.Position.X + rectangle.Size.X)
                     {
                         circle.Position = new Vector2f(rectangle.Position.X - circle.Radius + 1, circle.Position.Y);
+                        IsPressed = false;
                     }
                 }
                 return (((circle.Position.X + circle.Radius) - rectangle.Position.X) * 100) / rectangle.Size.X;
