@@ -20,3 +20,14 @@ C:\Users\pd50uyl\Desktop\git\maria-voiture\racetrack\recetrack-implementation\ra
 C:\Users\pd50uyl\Desktop\git\maria-voiture\racetrack\recetrack-implementation\racetrack-implementation\racetrack-implementation\obj\Debug\netcoreapp2.2\racetrack-implementation.AssemblyInfo.cs
 C:\Users\pd50uyl\Desktop\git\maria-voiture\racetrack\recetrack-implementation\racetrack-implementation\racetrack-implementation\obj\Debug\netcoreapp2.2\racetrack-implementation.dll
 C:\Users\pd50uyl\Desktop\git\maria-voiture\racetrack\recetrack-implementation\racetrack-implementation\racetrack-implementation\obj\Debug\netcoreapp2.2\racetrack-implementation.pdb
+C:\Users\thorey\Desktop\maria-voiture\racetrack\recetrack-implementation\racetrack-implementation\racetrack-implementation\bin\Debug\netcoreapp2.2\racetrack-implementation.deps.json
+C:\Users\thorey\Desktop\maria-voiture\racetrack\recetrack-implementation\racetrack-implementation\racetrack-implementation\bin\Debug\netcoreapp2.2\racetrack-implementation.runtimeconfig.json
+C:\Users\thorey\Desktop\maria-voiture\racetrack\recetrack-implementation\racetrack-implementation\racetrack-implementation\bin\Debug\netcoreapp2.2\racetrack-implementation.runtimeconfig.dev.json
+C:\Users\thorey\Desktop\maria-voiture\racetrack\recetrack-implementation\racetrack-implementation\racetrack-implementation\bin\Debug\netcoreapp2.2\racetrack-implementation.dll
+C:\Users\thorey\Desktop\maria-voiture\racetrack\recetrack-implementation\racetrack-implementation\racetrack-implementation\bin\Debug\netcoreapp2.2\racetrack-implementation.pdb
+C:\Users\thorey\Desktop\maria-voiture\racetrack\recetrack-implementation\racetrack-implementation\racetrack-implementation\obj\Debug\netcoreapp2.2\racetrack-implementation.csprojAssemblyReference.cache
+C:\Users\thorey\Desktop\maria-voiture\racetrack\recetrack-implementation\racetrack-implementation\racetrack-implementation\obj\Debug\netcoreapp2.2\racetrack-implementation.csproj.CoreCompileInputs.cache
+C:\Users\thorey\Desktop\maria-voiture\racetrack\recetrack-implementation\racetrack-implementation\racetrack-implementation\obj\Debug\netcoreapp2.2\racetrack-implementation.AssemblyInfoInputs.cache
+C:\Users\thorey\Desktop\maria-voiture\racetrack\recetrack-implementation\racetrack-implementation\racetrack-implementation\obj\Debug\netcoreapp2.2\racetrack-implementation.AssemblyInfo.cs
+C:\Users\thorey\Desktop\maria-voiture\racetrack\recetrack-implementation\racetrack-implementation\racetrack-implementation\obj\Debug\netcoreapp2.2\racetrack-implementation.dll
+C:\Users\thorey\Desktop\maria-voiture\racetrack\recetrack-implementation\racetrack-implementation\racetrack-implementation\obj\Debug\netcoreapp2.2\racetrack-implementation.pdb
