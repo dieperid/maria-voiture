@@ -1,0 +1,11 @@
+F:\maria-voiture\feature-swapper\feature-swapper\bin\Debug\netcoreapp2.2\feature-swapper.deps.json
+F:\maria-voiture\feature-swapper\feature-swapper\bin\Debug\netcoreapp2.2\feature-swapper.runtimeconfig.json
+F:\maria-voiture\feature-swapper\feature-swapper\bin\Debug\netcoreapp2.2\feature-swapper.runtimeconfig.dev.json
+F:\maria-voiture\feature-swapper\feature-swapper\bin\Debug\netcoreapp2.2\feature-swapper.dll
+F:\maria-voiture\feature-swapper\feature-swapper\obj\Debug\netcoreapp2.2\feature-swapper.csprojAssemblyReference.cache
+F:\maria-voiture\feature-swapper\feature-swapper\obj\Debug\netcoreapp2.2\feature-swapper.csproj.CoreCompileInputs.cache
+F:\maria-voiture\feature-swapper\feature-swapper\obj\Debug\netcoreapp2.2\feature-swapper.AssemblyInfoInputs.cache
+F:\maria-voiture\feature-swapper\feature-swapper\obj\Debug\netcoreapp2.2\feature-swapper.AssemblyInfo.cs
+F:\maria-voiture\feature-swapper\feature-swapper\bin\Debug\netcoreapp2.2\feature-swapper.pdb
+F:\maria-voiture\feature-swapper\feature-swapper\obj\Debug\netcoreapp2.2\feature-swapper.dll
+F:\maria-voiture\feature-swapper\feature-swapper\obj\Debug\netcoreapp2.2\feature-swapper.pdb
