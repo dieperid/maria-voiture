@@ -1,0 +1,13 @@
+C:\Users\damloup\Desktop\maria-voiture\game-lobby\game-lobby\bin\Debug\netcoreapp2.2\game-lobby.deps.json
+C:\Users\damloup\Desktop\maria-voiture\game-lobby\game-lobby\bin\Debug\netcoreapp2.2\game-lobby.runtimeconfig.json
+C:\Users\damloup\Desktop\maria-voiture\game-lobby\game-lobby\bin\Debug\netcoreapp2.2\game-lobby.runtimeconfig.dev.json
+C:\Users\damloup\Desktop\maria-voiture\game-lobby\game-lobby\bin\Debug\netcoreapp2.2\game-lobby.dll
+C:\Users\damloup\Desktop\maria-voiture\game-lobby\game-lobby\bin\Debug\netcoreapp2.2\game-lobby.pdb
+C:\Users\damloup\Desktop\maria-voiture\game-lobby\game-lobby\obj\Debug\netcoreapp2.2\game-lobby.csprojAssemblyReference.cache
+C:\Users\damloup\Desktop\maria-voiture\game-lobby\game-lobby\obj\Debug\netcoreapp2.2\main_menu.Resource1.resources
+C:\Users\damloup\Desktop\maria-voiture\game-lobby\game-lobby\obj\Debug\netcoreapp2.2\game-lobby.csproj.GenerateResource.cache
+C:\Users\damloup\Desktop\maria-voiture\game-lobby\game-lobby\obj\Debug\netcoreapp2.2\game-lobby.csproj.CoreCompileInputs.cache
+C:\Users\damloup\Desktop\maria-voiture\game-lobby\game-lobby\obj\Debug\netcoreapp2.2\game-lobby.AssemblyInfoInputs.cache
+C:\Users\damloup\Desktop\maria-voiture\game-lobby\game-lobby\obj\Debug\netcoreapp2.2\game-lobby.AssemblyInfo.cs
+C:\Users\damloup\Desktop\maria-voiture\game-lobby\game-lobby\obj\Debug\netcoreapp2.2\game-lobby.dll
+C:\Users\damloup\Desktop\maria-voiture\game-lobby\game-lobby\obj\Debug\netcoreapp2.2\game-lobby.pdb
