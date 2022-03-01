@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using SFML.Audio;
 using SFML.Graphics;
 using SFML.System;
@@ -12,6 +13,8 @@ namespace racetrack_implementation
         {
             int xCar = 188;
             int yCar = 560;
+            int carSizeX = 18;
+            int carSizeY = 48;
             //cam variable
             int x = 188;
             int y = 560;
@@ -30,7 +33,7 @@ namespace racetrack_implementation
 
             Texture car1Texture = new Texture(@"F:\01-Projets\Maria-voiture\cars\car1.png");
 
-            RectangleShape car1Shape = new RectangleShape(new Vector2f(18, 48));
+            RectangleShape car1Shape = new RectangleShape(new Vector2f(carSizeX, carSizeY));
             car1Shape.Position = new Vector2f(xCar - 9, yCar - 24);
             car1Shape.Texture = car1Texture;
             car1Shape.Origin = new Vector2f(9, 24);
@@ -64,11 +67,16 @@ namespace racetrack_implementation
                 //car
                 if ((Keyboard.IsKeyPressed(Keyboard.Key.A)))
                 {
-                    if (x == xCar && y== yCar && camIslock == true)
-                    {                        
+                    if (x == xCar && y == yCar && camIslock == true)
+                    {
                         x -= camSpeed;
                     }
-                    xCar -= camSpeed;
+
+                    //if (CheckCarPositionCompareToWall(xCar, yCar, carSizeX, carSizeY, walls.wallPositions))
+                    {
+                        xCar -= camSpeed;
+                    }
+
                     car1Shape.Rotation = 270;
                     car1Shape.Origin = new Vector2f(14, 16);
                     car1Shape.Size = new Vector2f(28, 32);
@@ -141,6 +149,25 @@ namespace racetrack_implementation
             {
                 Environment.Exit(0);
             }
+
+            /*bool CheckCarPositionCompareToWall(int carPosX, int carPosY, int carXSize, int carYSize, List<float> wallPosition)
+            {
+                int count = 0;
+                foreach (float position in wallPosition)
+                {
+                    if ( )
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+                    count += 2;
+                }
+                return true;
+            }*/
+
         }
     }
 }

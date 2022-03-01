@@ -1125,11 +1125,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\01-Projets\\Maria-voiture\\recetrack-implementation\\racetrack-implementation\\racetrack-implementation\\racetrack-implementation.csproj",
+      "projectUniqueName": "C:\\Users\\pd50uyl\\Desktop\\git\\maria-voiture\\racetrack\\recetrack-implementation\\racetrack-implementation\\racetrack-implementation\\racetrack-implementation.csproj",
       "projectName": "racetrack-implementation",
-      "projectPath": "F:\\01-Projets\\Maria-voiture\\recetrack-implementation\\racetrack-implementation\\racetrack-implementation\\racetrack-implementation.csproj",
+      "projectPath": "C:\\Users\\pd50uyl\\Desktop\\git\\maria-voiture\\racetrack\\recetrack-implementation\\racetrack-implementation\\racetrack-implementation\\racetrack-implementation.csproj",
       "packagesPath": "C:\\Users\\pd50uyl\\.nuget\\packages\\",
-      "outputPath": "F:\\01-Projets\\Maria-voiture\\recetrack-implementation\\racetrack-implementation\\racetrack-implementation\\obj\\",
+      "outputPath": "C:\\Users\\pd50uyl\\Desktop\\git\\maria-voiture\\racetrack\\recetrack-implementation\\racetrack-implementation\\racetrack-implementation\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

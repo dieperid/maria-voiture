@@ -7,15 +7,17 @@ using SFML.Window;
 
 namespace racetrack_implementation
 {
-    public class Wall
+    public partial class Wall
     {
         public List<RectangleShape> walls = new List<RectangleShape>();
+        public List<float> wallPositions = new List<float>();        
         public Wall()
         {
             
         }
         public void CreateAllWallsMap1()
         {
+            //outside walls
             CreateNewWall(10,10,190,100);
             CreateNewWall(10,20,200,80);
             CreateNewWall(10,10,210,70);
@@ -108,23 +110,90 @@ namespace racetrack_implementation
             CreateNewWall(10, 20, 1810, 670);
             CreateNewWall(10, 10, 1800, 690);
             CreateNewWall(10, 10, 1790, 700);
-            CreateNewWall(10, 10, 1780, 710);
-            //
+            CreateNewWall(10, 10, 1780, 710);           
             CreateNewWall(30, 10, 1750, 720);
             CreateNewWall(20, 10, 1730, 730);
             CreateNewWall(10, 10, 1720, 740);
             CreateNewWall(50, 10, 1670, 750);
-            CreateNewWall(50, 10, 1670, 750);
-
-
+            CreateNewWall(40, 10, 1630, 760);
+            CreateNewWall(110, 10, 1520, 770);
+            CreateNewWall(110, 10, 1410, 780);
+            CreateNewWall(50, 10, 1360, 770);            
+            CreateNewWall(20, 10, 1340, 760);
+            CreateNewWall(20, 10, 1320, 750);
+            CreateNewWall(20, 10, 1300, 740);
+            CreateNewWall(20, 10, 1280, 730);
+            CreateNewWall(20, 10, 1260, 720);
+            CreateNewWall(20, 10, 1240, 710);
+            CreateNewWall(10, 10, 1230, 700);
+            CreateNewWall(10, 10, 1220, 690);
+            CreateNewWall(20, 10, 1200, 680);            
+            CreateNewWall(70, 10, 1130, 670);
+            CreateNewWall(10, 10, 1120, 680);
+            CreateNewWall(10, 10, 1110, 690);
+            CreateNewWall(20, 10, 1090, 700);
+            CreateNewWall(20, 10, 1070, 710);
+            CreateNewWall(10, 10, 1060, 720);
+            CreateNewWall(20, 10, 1040, 730);
+            CreateNewWall(20, 10, 1020, 740);            
+            CreateNewWall(280, 10, 740, 750);
+            CreateNewWall(50, 10, 690, 740);            
+            CreateNewWall(20, 10, 670, 730);
+            CreateNewWall(20, 10, 650, 720);
+            CreateNewWall(10, 10, 640, 710);
+            CreateNewWall(20, 10, 620, 700);
+            CreateNewWall(40, 10, 580, 690);
+            CreateNewWall(10, 10, 570, 700);
+            CreateNewWall(10, 10, 560, 710);            
+            CreateNewWall(10, 90, 550, 720);
+            CreateNewWall(10, 20, 560, 810);
+            CreateNewWall(10, 10, 570, 830);
+            CreateNewWall(10, 10, 580, 840);
+            CreateNewWall(10, 10, 590, 850);
+            CreateNewWall(10, 100, 600, 860);           
+            CreateNewWall(10, 40, 590, 960);
+            CreateNewWall(10, 20, 580, 1000);
+            CreateNewWall(20, 10, 560, 1020);
+            CreateNewWall(20, 10, 540, 1030);
+            CreateNewWall(50, 10, 490, 1040);
+            CreateNewWall(100, 10, 390, 1050);            
+            CreateNewWall(50, 10, 340, 1040);
+            CreateNewWall(50, 10, 290, 1030);
+            CreateNewWall(40, 10, 250, 1020);          
+            CreateNewWall(10, 10, 240, 1010);
+            CreateNewWall(20, 10, 220, 1000);
+            CreateNewWall(20, 10, 200, 990);
+            CreateNewWall(20, 10, 180, 980);
+            CreateNewWall(10, 10, 170, 970);
+            CreateNewWall(10, 10, 160, 960);
+            CreateNewWall(10, 10, 150, 950);
+            CreateNewWall(10, 10, 140, 940);
+            CreateNewWall(10, 10, 130, 930);
+            CreateNewWall(10, 10, 120, 920);            
+            CreateNewWall(10, 20, 110, 900);
+            CreateNewWall(10,10, 100, 890);
+            CreateNewWall(10,30, 90, 860);
+            CreateNewWall(10,410, 80, 450);            
+            CreateNewWall(10, 30, 90, 420);
+            CreateNewWall(10, 20, 100, 400);
+            CreateNewWall(10, 30, 110, 370);
+            CreateNewWall(10, 20, 120, 350);
+            CreateNewWall(10, 30, 130, 320);
+            CreateNewWall(10, 30, 140, 290);            
+            CreateNewWall(10, 90, 150, 200);
+            CreateNewWall(10, 30, 160, 170);
+            CreateNewWall(10, 30, 170, 140);
+            CreateNewWall(10, 30, 180, 110);
 
         }
         public void CreateNewWall(float sizeX, float sizeY, float posX, float posY)
         {
             RectangleShape newWall = new RectangleShape(new Vector2f(sizeX, sizeY));
             newWall.Position = new Vector2f(posX, posY);
-            newWall.FillColor = Color.Magenta;
+            newWall.FillColor = Color.Magenta;                        
             this.walls.Add(newWall);
+            wallPositions.Add(posX);
+            wallPositions.Add(posY);
         }
     }
     
