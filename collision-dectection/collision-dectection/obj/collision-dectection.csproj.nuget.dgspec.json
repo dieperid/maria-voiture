@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\pl70jwz\\Desktop\\collision-dectection\\collision-dectection\\collision-dectection.csproj": {}
+    "C:\\Users\\thorey\\Desktop\\maria-voiture\\collision-dectection\\collision-dectection\\collision-dectection.csproj": {}
   },
   "projects": {
-    "C:\\Users\\pl70jwz\\Desktop\\collision-dectection\\collision-dectection\\collision-dectection.csproj": {
+    "C:\\Users\\thorey\\Desktop\\maria-voiture\\collision-dectection\\collision-dectection\\collision-dectection.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\pl70jwz\\Desktop\\collision-dectection\\collision-dectection\\collision-dectection.csproj",
+        "projectUniqueName": "C:\\Users\\thorey\\Desktop\\maria-voiture\\collision-dectection\\collision-dectection\\collision-dectection.csproj",
         "projectName": "collision-dectection",
-        "projectPath": "C:\\Users\\pl70jwz\\Desktop\\collision-dectection\\collision-dectection\\collision-dectection.csproj",
-        "packagesPath": "C:\\Users\\pl70jwz\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\pl70jwz\\Desktop\\collision-dectection\\collision-dectection\\obj\\",
+        "projectPath": "C:\\Users\\thorey\\Desktop\\maria-voiture\\collision-dectection\\collision-dectection\\collision-dectection.csproj",
+        "packagesPath": "C:\\Users\\thorey\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\thorey\\Desktop\\maria-voiture\\collision-dectection\\collision-dectection\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\pl70jwz\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\thorey\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
