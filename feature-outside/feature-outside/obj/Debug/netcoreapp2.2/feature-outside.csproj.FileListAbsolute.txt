@@ -1,0 +1,10 @@
+C:\Users\pl70jwz\Desktop\feature-outside\feature-outside\bin\Debug\netcoreapp2.2\feature-outside.deps.json
+C:\Users\pl70jwz\Desktop\feature-outside\feature-outside\bin\Debug\netcoreapp2.2\feature-outside.runtimeconfig.json
+C:\Users\pl70jwz\Desktop\feature-outside\feature-outside\bin\Debug\netcoreapp2.2\feature-outside.runtimeconfig.dev.json
+C:\Users\pl70jwz\Desktop\feature-outside\feature-outside\bin\Debug\netcoreapp2.2\feature-outside.dll
+C:\Users\pl70jwz\Desktop\feature-outside\feature-outside\obj\Debug\netcoreapp2.2\feature-outside.csproj.CoreCompileInputs.cache
+C:\Users\pl70jwz\Desktop\feature-outside\feature-outside\obj\Debug\netcoreapp2.2\feature-outside.AssemblyInfoInputs.cache
+C:\Users\pl70jwz\Desktop\feature-outside\feature-outside\obj\Debug\netcoreapp2.2\feature-outside.AssemblyInfo.cs
+C:\Users\pl70jwz\Desktop\feature-outside\feature-outside\bin\Debug\netcoreapp2.2\feature-outside.pdb
+C:\Users\pl70jwz\Desktop\feature-outside\feature-outside\obj\Debug\netcoreapp2.2\feature-outside.dll
+C:\Users\pl70jwz\Desktop\feature-outside\feature-outside\obj\Debug\netcoreapp2.2\feature-outside.pdb
