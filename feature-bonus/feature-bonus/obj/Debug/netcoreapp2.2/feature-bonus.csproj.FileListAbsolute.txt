@@ -1,0 +1,11 @@
+C:\Users\pl70jwz\Desktop\feature-bonus\feature-bonus\bin\Debug\netcoreapp2.2\feature-bonus.deps.json
+C:\Users\pl70jwz\Desktop\feature-bonus\feature-bonus\bin\Debug\netcoreapp2.2\feature-bonus.runtimeconfig.json
+C:\Users\pl70jwz\Desktop\feature-bonus\feature-bonus\bin\Debug\netcoreapp2.2\feature-bonus.runtimeconfig.dev.json
+C:\Users\pl70jwz\Desktop\feature-bonus\feature-bonus\bin\Debug\netcoreapp2.2\feature-bonus.dll
+C:\Users\pl70jwz\Desktop\feature-bonus\feature-bonus\obj\Debug\netcoreapp2.2\feature-bonus.csprojAssemblyReference.cache
+C:\Users\pl70jwz\Desktop\feature-bonus\feature-bonus\obj\Debug\netcoreapp2.2\feature-bonus.csproj.CoreCompileInputs.cache
+C:\Users\pl70jwz\Desktop\feature-bonus\feature-bonus\obj\Debug\netcoreapp2.2\feature-bonus.AssemblyInfoInputs.cache
+C:\Users\pl70jwz\Desktop\feature-bonus\feature-bonus\obj\Debug\netcoreapp2.2\feature-bonus.AssemblyInfo.cs
+C:\Users\pl70jwz\Desktop\feature-bonus\feature-bonus\bin\Debug\netcoreapp2.2\feature-bonus.pdb
+C:\Users\pl70jwz\Desktop\feature-bonus\feature-bonus\obj\Debug\netcoreapp2.2\feature-bonus.dll
+C:\Users\pl70jwz\Desktop\feature-bonus\feature-bonus\obj\Debug\netcoreapp2.2\feature-bonus.pdb
