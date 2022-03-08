@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29102.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "feature-outside", "feature-outside\feature-outside.csproj", "{932F5687-7831-4432-91CD-8F6901EB993D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{932F5687-7831-4432-91CD-8F6901EB993D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{932F5687-7831-4432-91CD-8F6901EB993D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{932F5687-7831-4432-91CD-8F6901EB993D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{932F5687-7831-4432-91CD-8F6901EB993D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2F05C7FA-B98C-4898-AB8C-17557528B02F}
+	EndGlobalSection
+EndGlobal
