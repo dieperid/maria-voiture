@@ -1,0 +1,18 @@
+cars-color:
+
+Covers:
+	- camo
+		-effet de camouflage
+		- color
+			- Normal: 	#005700
+			- Darker shade: #003900
+			- Lighter shade:#00b100
+		- camo effect
+			- shading
+		-palette dans le dossier
+	- heating
+		-effet de dégradé
+		-fait avec des shades
+		-palette dans le dossier
+
+Les nouvelles versions des voitures sont aussi en version .png x1000%
