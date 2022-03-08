@@ -1,4 +1,9 @@
-﻿using System;
+///ETML
+///Author : Kendy Song
+///Date : 08.03.2022
+///Summary : Player visual, movement and settings
+
+using System;
 using SFML.System;
 using SFML.Window;
 using SFML.Graphics;
