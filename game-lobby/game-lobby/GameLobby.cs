@@ -16,6 +16,11 @@ namespace game_lobby
         RectangleShape _allPlayersContainer;
 
         /// <summary>
+        /// Initialisation d'un rectangleshape qui vas contenir la couronne du joueur hote de la partie
+        /// </summary>
+        RectangleShape _hostCrown;
+
+        /// <summary>
         /// Initialisation d'un rectangleshape qui vas contenir un joueur
         /// </summary>
         RectangleShape _playerContainer;
@@ -31,9 +36,14 @@ namespace game_lobby
         Button _btnStart;
 
         /// <summary>
-        /// Initialisation d'un rectangleshape qui vas contenir le texte en attente de l'hote
+        /// Initialisation d'un texte en attente de l'hote
         /// </summary>
         Text _waitText;
+
+        /// <summary>
+        /// Initialisation d'un label contenant le nom du joueur
+        /// </summary>
+        Label _playerName;
 
         /// <summary>
         /// Initialisation de la renderwindow
@@ -44,6 +54,11 @@ namespace game_lobby
         /// Initialisation d'un rectangleshape qui vas contenir le background du menu
         /// </summary>
         RectangleShape _background;
+
+        /// <summary>
+        /// Liste de joueurs
+        /// </summary>
+        List<Drawable> players = new List<Drawable>();
 
         /// <summary>
         /// Constructor
@@ -72,12 +87,22 @@ namespace game_lobby
             //_stateHandler.SetNextState(typeof(MenuMulti).Name);
         }
 
+        /// <summary>
+        /// Méthode qui va surligner tout le bouton lorsque la souris passe dessus
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="args"></param>
         public void btnOver(object sender, EventArgs args)
         {
             Button btn = sender as Button;
             btn.Color = Color.Black;
         }
-
+        
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="args"></param>
         public void btnNotOver(object sender, EventArgs args)
         {
             Button btn = sender as Button;
@@ -119,13 +144,16 @@ namespace game_lobby
         /// </summary>
         public override void Load()
         {
+            //Liste fictive de joueurs
             List<string> nicknames = new List<string>();
-            nicknames.Add("thomas");
+            nicknames.Add("Thomas");
             nicknames.Add("Damien");
-            nicknames.Add("mathis");
+            nicknames.Add("Mathis");
             nicknames.Add("Samuel");
             nicknames.Add("Alexandre");
-            nicknames.Add("Aurélien");
+            nicknames.Add("Aurelien");
+
+            string host = nicknames[0];         //Joueur fictif host de la partie
 
             // Création du rectangle contenant le background
             _background = new RectangleShape(new Vector2f(_window.Size.X, _window.Size.Y));
@@ -143,23 +171,42 @@ namespace game_lobby
             _waitText.CharacterSize = 60;
 
             //Creation du rectangle contenant tous les joueurs
-            _allPlayersContainer = new RectangleShape(new Vector2f(800, 100));
+            _allPlayersContainer = new RectangleShape(new Vector2f(1400, 600));
             _allPlayersContainer.FillColor = Color.White;
-            _allPlayersContainer.Size = new Vector2f(1400, 700);
-            _allPlayersContainer.Position = new Vector2f(_w.Size.X / 2 - _allPlayersContainer.Size.X / 2, 150);
+            _allPlayersContainer.Position = new Vector2f(_w.Size.X / 2 - _allPlayersContainer.Size.X / 2, 200);
 
             //Création des rectangles contenants les joueurs
-            int counter = 1;
-            foreach(string nickname in nicknames)
+            int counter = 0;
+            for (int x = 0; x < 2; x++)
             {
-                _playerContainer = new RectangleShape(new Vector2f(_allPlayersContainer.Size.X / 2, 100));
-                _playerContainer.Texture = new Texture(Resource1.btnStart);
-                _playerContainer.Position = new Vector2f();
+                for(int y = 0; y < 3; y++)
+                {
+                    //Placement des container des joueurs
+                    _playerContainer = new RectangleShape(new Vector2f(_allPlayersContainer.Size.X / 2, _allPlayersContainer.Size.Y / 3));
+                    _playerContainer.Texture = new Texture(Resource1.playerContainer);
+                    _playerContainer.Position = new Vector2f(_allPlayersContainer.Position.X + _playerContainer.Size.X * x, _allPlayersContainer.Position.Y + _playerContainer.Size.Y * y);
+                    players.Add(_playerContainer);
 
-                counter++;
+                    //Placement des noms des joueurs
+                    _playerName = new Label(new Font("../../../Resources/pixelart.ttf"), _inputHandler);
+                    _playerName.Text = nicknames[counter];
+                    Widgets.Add(_playerName);
+                    _playerName.Position = new Vector2f(_playerContainer.Position.X + _playerContainer.Size.X / 5, _playerContainer.Position.Y + _playerContainer.Size.Y / 2 - 15);
+
+                    //Positionnement de la couronne du host de la partie
+                    if(host == _playerName.Text)
+                    {
+                        _hostCrown = new RectangleShape();
+                        _hostCrown.Size = new Vector2f(160, 150);
+                        _hostCrown.Texture = new Texture(Resource1.hostCrown);
+                        _hostCrown.Position = new Vector2f(_playerContainer.Position.X + _playerContainer.Size.X / 2 , _playerContainer.Position.Y + 25);
+                    }
+
+                    counter++;
+                }
             }
 
-            // Création du bouton multijoueur
+            // Création du bouton commencer
             _btnStart = _widgetHandler.CreateButton();
             _btnStart.Texture = new Texture(Resource1.btnStart); // Image 575 x 150
             _btnStart.Size = new Vector2f(575, 150);
@@ -187,7 +234,13 @@ namespace game_lobby
             //Affichage des autres inputs
             _w.Draw(_waitText);
             _w.Draw(_allPlayersContainer);
-            _w.Draw(_playerContainer);
+
+            foreach(Drawable player in players)
+            {
+                _w.Draw(player);
+            }
+
+            _w.Draw(_hostCrown);
         }
     }
 }

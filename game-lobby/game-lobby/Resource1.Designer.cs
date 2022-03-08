@@ -89,5 +89,25 @@ namespace game_lobby {
                 return ((byte[])(obj));
             }
         }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Byte[].
+        /// </summary>
+        internal static byte[] hostCrown {
+            get {
+                object obj = ResourceManager.GetObject("hostCrown", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Byte[].
+        /// </summary>
+        internal static byte[] playerContainer {
+            get {
+                object obj = ResourceManager.GetObject("playerContainer", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
     }
 }
